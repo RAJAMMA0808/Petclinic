@@ -70,7 +70,7 @@ pipeline {
         
         stage("TRIVY"){
             steps{
-                sh " trivy petclinic raji0808/petclinic:latest"
+                sh " trivy Petclinic raji0808/Petclinic:latest"
             }
         }
         
