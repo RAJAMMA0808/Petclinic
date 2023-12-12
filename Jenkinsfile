@@ -3,6 +3,7 @@ pipeline {
     
     tools{
         jdk 'jdk11'
+        jdk 'jdk17'
         maven 'maven3'
     }
     
@@ -43,7 +44,7 @@ pipeline {
         
         stage("OWASP Dependency Check"){
             steps{
-                dependencyCheck additionalArguments: '--scan ./ --format HTML ', odcInstallation: 'DP'
+                dependencyCheck additionalArguments: '--scan ./ --format HTML ', odcInstallation: 'DP-Check'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
         }
