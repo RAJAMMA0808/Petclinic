@@ -62,7 +62,7 @@ pipeline {
                         
                         sh "docker build -t Petclinic ."
                         sh "docker tag Petclinic raji0808/Petclinic:latest "
-                        sh "docker push raji0808/Petclinic:latest "
+                        sh "docker push raji0808/petclinic:latest "
                     }
                 }
             }
