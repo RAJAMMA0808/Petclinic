@@ -76,7 +76,7 @@ pipeline {
         
         stage("Deploy To Tomcat"){
             steps{
-                sh "cp  /var/lib/jenkins/workspace/CI-CD/target/petclinic.war /opt/apache-tomcat-9.0.65/webapps/ "
+                sh "cp  /var/lib/jenkins/workspace/petclinic.war /opt/apache-tomcat-9.0.65/webapps/ "
             }
         }
     }
